@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Балаклава - Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a onclick="navigateTo('index.html')">Главная</a> → 
+            <a onclick="navigateTo('crimea.html')">Крым</a> → 
+            <span>Балаклава</span>
+        </div>
+
+        <div class="glass-card city-header">
+            <h1>⚓ Балаклава</h1>
+            <p>Уютная бухта, подводные лодки, живописные виды</p>
+        </div>
+
+        <h2>🏛️ Главная достопримечательность</h2>
+        <div class="glass-card attraction-card">
+            <h3>Музей подводных лодок</h3>
+            <p>Секретный объект времен Холодной войны</p>
+            <p>🎫 Вход: 600₽</p>
+            <button class="action-button" onclick="showOnMap(44.4967, 33.5989)">📍 На карте</button>
+        </div>
+
+        <h2>🍽️ Рестораны у моря</h2>
+        <div class="glass-card">
+            <p>Скоро здесь появятся лучшие рестораны Балаклавы с видом на бухту</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
