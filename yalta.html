@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ялта - Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f0d0415c-b7ab-4b50-9d3b-2cee3e96a562&lang=ru_RU"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Навигация -->
+        <div class="breadcrumb">
+            <a onclick="navigateTo('index.html')">Главная</a> → 
+            <a onclick="navigateTo('crimea.html')">Крым</a> → 
+            <span>Ялта</span>
+        </div>
+
+        <!-- Заголовок -->
+        <div class="glass-card city-header">
+            <h1>🏖️ Ялта</h1>
+            <div class="city-weather">
+                <span class="big-temp">+16°C</span>
+                <span>🌊 море +13°C</span>
+            </div>
+        </div>
+
+        <!-- Интерактивная карта -->
+        <h2>🗺️ Карта отелей и достопримечательностей</h2>
+        <div id="yaltaMap" class="map-container"></div>
+
+        <!-- Фильтры отелей -->
+        <div class="glass-card filters">
+            <h3>Фильтры отелей</h3>
+            <div class="filter-group">
+                <label>⭐ Звездность:</label>
+                <select id="hotelStars">
+                    <option value="0">Любая</option>
+                    <option value="3">3 звезды</option>
+                    <option value="4">4 звезды</option>
+                    <option value="5">5 звезд</option>
+                </select>
+                
+                <label>💰 Цена до:</label>
+                <input type="range" id="priceRange" min="1000" max="20000" step="1000" value="20000">
+                <span id="priceValue">20000₽</span>
+                
+                <label>📏 До моря:</label>
+                <select id="seaDistance">
+                    <option value="0">Любое</option>
+                    <option value="100">до 100м</option>
+                    <option value="300">до 300м</option>
+                    <option value="500">до 500м</option>
+                </select>
+            </div>
+            <button class="action-button" onclick="applyFilters()">Применить</button>
+        </div>
+
+        <!-- Список отелей -->
+        <h2>🏨 Отели у моря</h2>
+        <div class="hotels-list" id="hotelsList">
+            <!-- Загружается из data.js -->
+        </div>
+
+        <!-- Достопримечательности -->
+        <h2>🏛️ Достопримечательности</h2>
+        <div class="attractions-grid" id="attractionsList">
+            <!-- Загружается из data.js -->
+        </div>
+
+        <!-- Рестораны -->
+        <h2>🍽️ Рестораны</h2>
+        <div class="restaurants-list" id="restaurantsList">
+            <!-- Загружается из data.js -->
+        </div>
+
+        <!-- Активный отдых -->
+        <h2>🏍️ Активный отдых</h2>
+        <div class="activities-grid" id="activitiesList">
+            <!-- Загружается из data.js -->
+        </div>
+
+        <!-- Кнопка маршрута -->
+        <div class="glass-card cta">
+            <h3>🏔️ Готов к приключениям?</h3>
+            <p>Отправляйся на пит-байках на Ай-Петри</p>
+            <button class="action-button large" onclick="navigateTo('route-aypetri.html')">
+                🏍️ Смотреть маршрут
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
