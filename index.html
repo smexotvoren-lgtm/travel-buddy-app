@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Travel Buddy - Путешествия по России</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧳 Travel Buddy</h1>
+            <div class="user-info" id="userInfo">
+                <span id="userName">Загрузка...</span>
+            </div>
+        </div>
+
+        <!-- Погода в популярных городах -->
+        <div class="glass-card">
+            <h2>🌤️ Погода сейчас</h2>
+            <div class="weather-scroll" id="weatherWidget">
+                <!-- Загружается из data.js -->
+            </div>
+        </div>
+
+        <!-- Популярные направления -->
+        <h2>🔥 Популярные направления</h2>
+        <div class="destinations-grid" id="destinationsGrid">
+            <!-- Россия (пилотный регион) -->
+            <div class="destination-card glass-card" data-country="russia" data-region="crimea" onclick="navigateTo('crimea.html')">
+                <span class="country-flag">🇷🇺</span>
+                <span class="country-name">Россия</span>
+                <span class="region-name">Крым</span>
+                <span class="weather-temp">+15°C</span>
+                <div class="stats">
+                    <span>🏖️ 3 курорта</span>
+                    <span>🏔️ 5 маршрутов</span>
+                </div>
+            </div>
+
+            <!-- Другие страны (для будущего) -->
+            <div class="destination-card glass-card disabled">
+                <span class="country-flag">🇹🇷</span>
+                <span class="country-name">Турция</span>
+                <span class="region-name">Скоро</span>
+                <span class="badge">В разработке</span>
+            </div>
+            
+            <div class="destination-card glass-card disabled">
+                <span class="country-flag">🇪🇬</span>
+                <span class="country-name">Египет</span>
+                <span class="region-name">Скоро</span>
+                <span class="badge">В разработке</span>
+            </div>
+        </div>
+
+        <!-- Почему Крым -->
+        <div class="glass-card featured">
+            <h2>🏔️ Пилотный проект: Крым</h2>
+            <p>Идеальный отдых в России: море, горы, леса и тысячи лет истории</p>
+            <button class="action-button" onclick="navigateTo('crimea.html')">Исследовать Крым →</button>
+        </div>
+
+        <!-- Быстрые ссылки -->
+        <div class="quick-links">
+            <div class="glass-card link-card" onclick="navigateTo('crimea.html#hotels')">
+                <span class="emoji">🏨</span>
+                <span>Отели у моря</span>
+            </div>
+            <div class="glass-card link-card" onclick="navigateTo('crimea.html#activities')">
+                <span class="emoji">🏍️</span>
+                <span>Активный отдых</span>
+            </div>
+            <div class="glass-card link-card" onclick="navigateTo('crimea.html#routes')">
+                <span class="emoji">🗺️</span>
+                <span>Маршруты</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
