@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крым - Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Навигация -->
+        <div class="breadcrumb">
+            <a onclick="navigateTo('index.html')">Главная</a> → <span>Крым</span>
+        </div>
+
+        <!-- Заголовок региона -->
+        <div class="glass-card region-header">
+            <h1>🏖️ Крым</h1>
+            <p class="region-description">Жемчужина России — море, горы, леса и тысячи лет истории</p>
+            
+            <!-- Погода в регионе -->
+            <div class="weather-region">
+                <div class="weather-main">
+                    <span class="temp">+15°C</span>
+                    <span class="condition">переменная облачность</span>
+                </div>
+                <div class="sea-temp">🌊 Море: +12°C</div>
+            </div>
+        </div>
+
+        <!-- Города Крыма -->
+        <h2>🏙️ Города и курорты</h2>
+        <div class="cities-grid">
+            <!-- Ялта -->
+            <div class="city-card glass-card" onclick="navigateTo('yalta.html')">
+                <img src="https://source.unsplash.com/400x300/?yalta" alt="Ялта" class="city-image">
+                <div class="city-info">
+                    <h3>Ялта</h3>
+                    <p class="city-desc">Главный курорт ЮБК, окруженный горами и парками</p>
+                    <div class="city-stats">
+                        <span>🏨 245 отелей</span>
+                        <span>🏔️ Ай-Петри</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Севастополь -->
+            <div class="city-card glass-card" onclick="navigateTo('sevastopol.html')">
+                <img src="https://source.unsplash.com/400x300/?sevastopol" alt="Севастополь" class="city-image">
+                <div class="city-info">
+                    <h3>Севастополь</h3>
+                    <p class="city-desc">Город-герой, база флота, древний Херсонес</p>
+                    <div class="city-stats">
+                        <span>🏨 189 отелей</span>
+                        <span>🏛️ Херсонес</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Балаклава -->
+            <div class="city-card glass-card" onclick="navigateTo('balaklava.html')">
+                <img src="https://source.unsplash.com/400x300/?balaklava" alt="Балаклава" class="city-image">
+                <div class="city-info">
+                    <h3>Балаклава</h3>
+                    <p class="city-desc">Уютная бухта, подводные лодки, живописные виды</p>
+                    <div class="city-stats">
+                        <span>🏨 45 отелей</span>
+                        <span>⚓ Музей ПЛ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Популярные маршруты -->
+        <h2>🏔️ Популярные маршруты</h2>
+        <div class="routes-grid">
+            <div class="route-card glass-card" onclick="navigateTo('route-aypetri.html')">
+                <span class="route-icon">🏍️</span>
+                <h3>Ялта - Ай-Петри</h3>
+                <p>Пит-байки, серпантин, виды на море</p>
+                <div class="route-meta">
+                    <span>⏱️ 3 часа</span>
+                    <span>📏 35 км</span>
+                </div>
+            </div>
+
+            <div class="route-card glass-card" onclick="navigateTo('route-sevastopol.html')">
+                <span class="route-icon">🚶</span>
+                <h3>Большая Севастопольская</h3>
+                <p>Пеший маршрут через реликтовый лес</p>
+                <div class="route-meta">
+                    <span>⏱️ 4 часа</span>
+                    <span>📏 12 км</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Винодельни -->
+        <h2>🍷 Винодельни Крыма</h2>
+        <div class="wineries-grid">
+            <div class="winery-card glass-card">
+                <h3>Массандра</h3>
+                <p>🍇 Дегустации, экскурсии, погреба</p>
+                <span class="price">от 1500₽</span>
+                <button class="small-button" onclick="showOnMap(44.5189, 34.1849)">На карте</button>
+            </div>
+            
+            <div class="winery-card glass-card">
+                <h3>Новый Свет</h3>
+                <p>🍾 Шампанское, грот Голицына</p>
+                <span class="price">от 1200₽</span>
+                <button class="small-button" onclick="showOnMap(44.8278, 34.9136)">На карте</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
