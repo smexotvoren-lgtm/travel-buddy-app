@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Севастополь - Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a onclick="navigateTo('index.html')">Главная</a> → 
+            <a onclick="navigateTo('crimea.html')">Крым</a> → 
+            <span>Севастополь</span>
+        </div>
+
+        <div class="glass-card city-header">
+            <h1>⚓ Севастополь</h1>
+            <p>Город-герой, база Черноморского флота</p>
+        </div>
+
+        <h2>🏨 Отели</h2>
+        <div class="hotels-list">
+            <div class="hotel-card glass-card">
+                <img src="https://source.unsplash.com/400x300/?sevastopol-hotel" class="hotel-image">
+                <div class="hotel-info">
+                    <h3>Отель Севастополь</h3>
+                    <div class="hotel-stars">⭐⭐⭐⭐</div>
+                    <div class="hotel-distance">📍 100м до моря</div>
+                    <div class="hotel-price">4800₽/ночь</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🏛️ Достопримечательности</h2>
+        <div class="attractions-list">
+            <div class="glass-card attraction-card">
+                <h3>Херсонес Таврический</h3>
+                <p>Древнегреческий город, место крещения князя Владимира</p>
+                <span class="badge">Вход свободный</span>
+            </div>
+            
+            <div class="glass-card attraction-card">
+                <h3>Малахов курган</h3>
+                <p>Мемориал обороны Севастополя</p>
+                <span class="badge">Вход свободный</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
