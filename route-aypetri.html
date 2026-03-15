@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маршрут: Ялта - Ай-Петри - Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f0d0415c-b7ab-4b50-9d3b-2cee3e96a562&lang=ru_RU"></script>
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a onclick="navigateTo('index.html')">Главная</a> → 
+            <a onclick="navigateTo('crimea.html')">Крым</a> → 
+            <a onclick="navigateTo('yalta.html')">Ялта</a> → 
+            <span>Маршрут на Ай-Петри</span>
+        </div>
+
+        <div class="glass-card route-header">
+            <h1>🏍️ Ялта - Ай-Петри</h1>
+            <div class="route-badges">
+                <span class="badge">⏱️ 3 часа</span>
+                <span class="badge">📏 35 км</span>
+                <span class="badge">📈 Сложность: средняя</span>
+            </div>
+        </div>
+
+        <!-- Карта маршрута -->
+        <div id="routeMap" class="map-container" style="height: 400px;"></div>
+
+        <!-- Детали маршрута -->
+        <div class="glass-card route-details">
+            <h2>📍 Остановки на маршруте</h2>
+            <div class="stops-timeline">
+                <div class="stop-item">
+                    <div class="stop-marker start">🏁</div>
+                    <div class="stop-content">
+                        <h3>Старт: Ялта</h3>
+                        <p>Набережная, прокат пит-байков</p>
+                        <button class="small-button" onclick="showOnMap(44.4952, 34.1667)">📍 На карте</button>
+                    </div>
+                </div>
+
+                <div class="stop-item">
+                    <div class="stop-marker">📸</div>
+                    <div class="stop-content">
+                        <h3>Ласточкино гнездо</h3>
+                        <p>Остановка для фото, 20 мин</p>
+                        <button class="small-button" onclick="showOnMap(44.4307, 34.1284)">📍 На карте</button>
+                    </div>
+                </div>
+
+                <div class="stop-item">
+                    <div class="stop-marker">🌄</div>
+                    <div class="stop-content">
+                        <h3>Беседка ветров</h3>
+                        <p>Обзорная точка, панорама на море</p>
+                        <button class="small-button" onclick="showOnMap(44.4567, 34.0567)">📍 На карте</button>
+                    </div>
+                </div>
+
+                <div class="stop-item">
+                    <div class="stop-marker finish">🏁</div>
+                    <div class="stop-content">
+                        <h3>Финиш: Ай-Петри</h3>
+                        <p>Плато, кафе, сувениры</p>
+                        <button class="small-button" onclick="showOnMap(44.4500, 34.0500)">📍 На карте</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Аренда и советы -->
+        <div class="glass-card">
+            <h2>💰 Аренда пит-байка</h2>
+            <div class="rental-info">
+                <p class="price">от 4000₽ за 3 часа</p>
+                <p class="phone">📞 +7 (978) 123-45-67</p>
+                <p class="whatsapp">💬 WhatsApp: +7 (978) 123-45-67</p>
+                <button class="action-button" onclick="bookRental()">Забронировать</button>
+            </div>
+
+            <h3 style="margin-top: 30px;">🚦 Советы</h3>
+            <ul class="tips-list">
+                <li>🧥 Берите теплые вещи (на горе ветрено)</li>
+                <li>⛽ Заправка есть на выезде из Ялты</li>
+                <li>🌅 Лучшее время: утро 9:00 (меньше машин)</li>
+                <li>📷 Обязательно возьмите фотоаппарат</li>
+                <li>💧 Вода и перекус (на трассе мало магазинов)</li>
+                <li>🧴 Крем от солнца даже весной</li>
+            </ul>
+        </div>
+
+        <!-- Похожие маршруты -->
+        <h2>🔍 Похожие маршруты</h2>
+        <div class="related-routes">
+            <div class="glass-card route-card" onclick="navigateTo('route-baidary.html')">
+                <h3>🏍️ Байдарские ворота</h3>
+                <p>Через старый перевал, 4 часа</p>
+            </div>
+            <div class="glass-card route-card" onclick="navigateTo('route-cave.html')">
+                <h3>🚶 Пешком к водопаду Учан-Су</h3>
+                <p>Легкий маршрут, 2 часа</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
